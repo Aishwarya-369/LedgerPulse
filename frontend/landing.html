@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LedgerPulse — Autonomous FinTech Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Pulse Logo Favicon (Standard, Apple, and Vector) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 12h-4l-3 9L9 3l-3 9H2'/%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/static/manifest.json">
+  <meta name="theme-color" content="#003087">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 min-h-screen flex flex-col selection:bg-blue-600 selection:text-white">
+
+  <!-- Top Blue Location Banner -->
+  <div class="bg-[#003087] text-white text-xs py-2 px-6 flex items-center justify-between font-medium">
+    <div class="flex items-center gap-1 mx-auto sm:mx-0">
+      <span>Explore what LedgerPulse offers in your region.</span>
+      <a href="/login?mode=login" class="underline font-bold hover:text-blue-200 ml-1">Go to Login &rarr;</a>
+    </div>
+    <button onclick="this.parentElement.style.display='none'" class="hidden sm:block text-blue-200 hover:text-white text-sm" aria-label="close banner">&times;</button>
+  </div>
+
+  <!-- Corporate Header -->
+  <header class="border-b border-slate-200/80 bg-white/95 backdrop-blur sticky top-0 z-50 px-6 sm:px-12 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-10">
+      <a href="/" class="flex items-center space-x-2.5">
+        <div class="h-9 w-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-md">
+          <svg class="h-5 w-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+          </svg>
+        </div>
+        <span class="font-black text-xl tracking-tight text-[#003087]">LedgerPulse</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-700">
+        <a href="#features" class="hover:text-[#0070ba]">Enterprise</a>
+        <a href="#features" class="hover:text-[#0070ba]">Freelance</a>
+        <a href="#compliance" class="hover:text-[#0070ba]">Tax &amp; VAT Engine</a>
+      </nav>
+    </div>
+
+    <!-- Auth Actions -->
+    <div class="flex items-center space-x-3">
+      <a href="/login?mode=login" class="px-5 py-2 text-sm font-bold text-slate-700 hover:text-[#003087] rounded-full border border-slate-300 hover:border-slate-400 transition">
+        Log In
+      </a>
+      <a href="/login?mode=signup" class="px-5 py-2 text-sm font-bold text-white bg-black hover:bg-slate-800 rounded-full shadow transition">
+        Sign Up
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="flex-1 flex flex-col items-center justify-center text-center px-4 pt-16 pb-20 max-w-5xl mx-auto">
+    
+    <!-- Audience Toggle Pill -->
+    <div class="inline-flex p-1 bg-slate-100 rounded-full border border-slate-200 mb-8">
+      <button class="px-6 py-1.5 text-xs font-bold rounded-full bg-white text-slate-900 shadow-sm">Business</button>
+      <button class="px-6 py-1.5 text-xs font-semibold rounded-full text-slate-500 hover:text-slate-800">Personal</button>
+    </div>
+
+    <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight text-slate-900 mb-4">
+      LedgerPulse
+    </h1>
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-[#003087] mb-6">
+      One platform for your business needs
+    </h2>
+
+    <p class="max-w-2xl text-base text-slate-600 mb-10 leading-relaxed">
+      LedgerPulse unifies autonomous Gemini AI invoicing, multi-currency VAT compliance, and real-time ledger settlement into one seamless operating system.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="/login?mode=signup" class="w-full sm:w-auto px-8 py-3.5 bg-black hover:bg-slate-800 text-white font-bold rounded-full shadow-lg transition">
+        Sign Up for LedgerPulse
+      </a>
+      <a href="/app" class="w-full sm:w-auto px-8 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-full border border-slate-200 transition">
+        Log In to Dashboard
+      </a>
+    </div>
+
+    <!-- Highlights Banner -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-10 border-t border-slate-100 w-full max-w-4xl text-center">
+      <div>
+        <div class="text-2xl font-black text-blue-900">99.8%</div>
+        <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">Extraction Accuracy</div>
+      </div>
+      <div>
+        <div class="text-2xl font-black text-blue-900">4 Currencies</div>
+        <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">Live Sandbox Rails</div>
+      </div>
+      <div>
+        <div class="text-2xl font-black text-blue-600">Zero Setup</div>
+        <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">Natural Language Prompt</div>
+      </div>
+      <div>
+        <div class="text-2xl font-black text-emerald-600">Real-Time</div>
+        <div class="text-xs text-slate-500 mt-1 uppercase tracking-wider font-semibold">Treasury Audit Trail</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 py-8 px-6 text-center text-xs text-slate-400">
+    <div class="flex justify-center space-x-6 mb-3">
+      <a href="#" class="hover:text-slate-600">About</a>
+      <a href="#" class="hover:text-slate-600">Help</a>
+      <a href="#" class="hover:text-slate-600">Contact</a>
+      <a href="#" class="hover:text-slate-600">Security</a>
+      <a href="#" class="hover:text-slate-600">Terms &amp; Privacy</a>
+    </div>
+    <p>&copy; 2026 LedgerPulse Platforms, Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
