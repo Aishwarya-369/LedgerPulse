@@ -2,6 +2,8 @@ fastapi
 uvicorn
 python-dotenv
 pydantic
+pydantic-settings
+email-validator
 sqlalchemy
 google-genai
 requests
