@@ -1,10 +1,9 @@
 fastapi
-uvicorn[standard]
+uvicorn
 python-dotenv
-google-generativeai
+pydantic
+sqlalchemy
 google-genai
 requests
 httpx
-pydantic
-jinja2
 python-multipart
